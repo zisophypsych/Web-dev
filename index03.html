@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      This is My JS Work!
+      <div class="cool">
+        <input type="number" placeholder="enter a number" id="num1" />
+        <input type="number" placeholder="enter a number" id="num2" />
+        <button onclick="addition()">Add</button>
+        <div id="out"></div>
+      </div>
+    </div>
+  </body>
+  <style>
+    .container {
+      margin: 10px 50px;
+    }
+  </style>
+  <script>
+    function addition() {
+      let first_number = parseInt(document.getElementById("num1").value);
+      let second_number = document.getElementById("num2").value;
+
+      let add_result = first_number + second_number;
+
+      document.getElementById("out").innerHTML = add_result;
+    }
+  </script>
+</html>
