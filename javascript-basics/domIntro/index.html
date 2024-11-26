@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basic</title>
+</head>
+<body>
+    <h1>Document Object Manipulation</h1>
+
+    <div>
+        <p class="paragraph" id="p1">
+            this is an example paragraph that i am going to manipulate through JS
+        </p>
+        <h2 class="remove" >This will be removed by JS</h2>
+        <h1 id="n"></h1>
+
+        <a href="youtube.com">Youtube</a>
+        <h2>this is <span class="remove">heading</span></h2>
+        <a class="remove" href="yahoo.com">Yahoo!!!</a>
+    </div>
+    <button id="butt">Clickme</button>
+    <button id="button-one">Create Heading</button>
+    <div id="container-one">
+
+    </div>
+</body>
+
+<script>
+    // const name = prompt("What is your name ?" )
+    // alert("Hii, " + name )
+    // document.querySelector("#n").innerHTML = "Hello, " + name
+    // document.querySelector("p").innerText = "your paragraph is modified"
+    const link = document.querySelector("a")
+    // link.textContent = "Facebook"
+    // link.href = "facebook.com"
+    const elements = document.getElementsByClassName("remove");
+    for (let i = elements.length - 1; i >= 0 ; i-- ) {
+        console.log(elements[i])
+        elements[i].remove();
+    };
+    const butt = document.getElementById("butt")
+    butt.addEventListener('click', () => {
+        if(document.getElementById("p1").style.color == "red"){
+            document.getElementById("p1").style.color = "green"
+        } else {
+            document.getElementById("p1").style.color = "red"
+        }
+    })
+
+</script>
+<script>
+    const buttonOne = document.getElementById("button-one")
+    const containerOne = document.getElementById("container-one")
+
+    buttonOne.addEventListener('click', () => {
+        const heading = prompt("What is the heading?, News")
+        const el = document.createElement("h2")
+        el.innerText = heading
+        document.getElementById("container-one").appendChild(el)
+    })
+</script>
+</html>
