@@ -1,0 +1,26 @@
+#recipes {
+    color: #990011;
+    margin-right: 400px;
+    border-radius: 3px;
+}
+
+#mainheading {
+    background-color: #990011;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 400px;
+    border-radius: 3px;
+}
+
+.mainbody {
+    background-color:  #FCF6F5;
+}
+
+.recipe-heading {
+    color: #990011;
+}
+
+.adjust_font_weight {
+    font-weight: bold;
+}
